@@ -20,17 +20,72 @@ body {
     margin-right: 24px;
 }
 
-.theme__button {
-    margin: 64px 0 30px;
+.theme__description {
+    margin: 64px 0 5px;
+    font-weight: bold;
     font-size: 14px;
-    padding: 8px 16px;
+    padding: 5px 10px;
     background: #ECF4FF;
     box-sizing: border-box;
     border-radius: 100px;
     border: 2px solid #0E1D2F;
   }
 
+.theme__switch{
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 25px;
+}
+  
+.switch__input { 
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.switch__slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    -webkit-transition: .4s;
+    transition: .4s;
+    border-radius: 34px;
+}
+
+.switch__slider:before {
+    position: absolute;
+    content: "";
+    height: 20px;
+    width: 20px;
+    left: 4px;
+    bottom: 3px;
+    background-color: white;
+    -webkit-transition: .4s;
+    transition: .4s;
+    border-radius: 50%;
+}
+
+.switch__input:checked + .switch__slider {
+    background-color: #6634a7;
+}
+
+.switch__input:focus + .switch__slider {
+    box-shadow: 0 0 2px #6634a7;
+}
+
+.switch__input:checked + .switch__slider:before {
+    -webkit-transform: translateX(32px);
+    -ms-transform: translateX(32px);
+    transform: translateX(32px);
+}
+
 .profile__photo {
+    margin-top: 60px;
     max-width: 120px;
     border-radius: 50%;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.5);
@@ -91,7 +146,7 @@ body {
     color: #1C1C1C;
 }
 
-.dark .theme__button {
+.dark .theme__description {
     color: #FFFFFF;
     background: #1C1C1C;
     box-sizing: border-box;
