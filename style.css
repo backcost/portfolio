@@ -185,6 +185,10 @@ body {
         padding: 7px;
     }
 
+    .container__profile {
+        margin-right: 0;
+    }
+
     .theme__description {
         margin: 36px 0 8px;
       }
